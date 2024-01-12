@@ -63,54 +63,26 @@
                                             <td>{{ $employee->user->name }}</td>
                                             <td>{{ $employee->user->email }}</td>
                                             <td>{{ $employee->position->name_position }}</td>
-                                            <td>{{ $employee->position->departement->name_departements }}</td>
+                                            <td>{{ $employee->position->departement->name_departement }}</td>
                                             <td>
-                                                <a href="{{ url("employee/$employee->id_employee/edit") }}"
+                                                <a href="{{ url("employee/$employee->id/edit") }}"
                                                     class="btn btn-outline-primary">
                                                     <i class="fa fa-edit"></i>&nbsp; Edit
                                                 </a>
-                                                <a href="{{ url("employee/$employee->id_employee/delete") }}"
+                                                <a href="{{ url("employee/$employee->id") }}"
+                                                    class="btn btn-outline-primary">
+                                                    <i class="fa fa-eye"></i>&nbsp; Detail
+                                                </a>
+                                                <a href="{{ url("employee/$employee->id/delete") }}"
                                                     onclick="return confirm('Apakah Anda Yakin Menghapus Data?');"
                                                     class="btn btn-outline-danger"> <i class="fa fa-trash"></i>&nbsp;
                                                     Delete</i></a>
-                                                {{-- <button type="button" class="btn btn-outline-danger" data-toggle="modal"
-                                                    data-target="#staticModal">
-                                                    <i class="fa fa-trash"></i>&nbsp; Delete
-                                                </button> --}}
                                             </td>
                                         </tr>
                                     @endforeach
 
                                 </tbody>
                             </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="content">
-        <div class="animated">
-            <div class="modal fade" id="staticModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-sm" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="staticModalLabel">Delete Data</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <p>
-                                Are you sure you wanna delete this data?
-                            </p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                            <a href="{{ url("employee/$employee->id_employee/delete") }}" class="btn btn-primary">
-                                &nbsp; Confirm
-                            </a>
                         </div>
                     </div>
                 </div>
