@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DepartementController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\LeaveController;
 use App\Http\Controllers\PositionController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -53,3 +54,11 @@ Route::get('user/create', [UserController::class, 'create']);
 Route::get('user/{id}/edit', [UserController::class, 'edit']);
 Route::patch('user/{id}', [UserController::class, 'update']); //update
 Route::get('user/{id}/delete', [UserController::class, 'destroy']); //delete
+
+// LEAVE
+Route::post('leave', [LeaveController::class, 'store']); //create
+Route::get('leave', [LeaveController::class, 'index']);
+Route::get('leave/create', [LeaveController::class, 'create']);
+Route::get('leave/{id}/edit', [LeaveController::class, 'edit']);
+Route::patch('leave/{id}', [LeaveController::class, 'update']); //update
+Route::get('leave/{id}/delete', [LeaveController::class, 'destroy']); //delete

@@ -21,6 +21,13 @@
                 <li>
                     <a href="{{ url('employee') }}"> <i class="menu-icon fa fa-users"></i>Employee</a>
                 </li>
+                <li class="menu-title">ACTIVITY</li>
+                <li>
+                    <a href="{{ url('attendance') }}"> <i class="menu-icon fa fa-users"></i>Attendance</a>
+                </li>
+                <li>
+                    <a href="{{ url('leave') }}"> <i class="menu-icon fa fa-users"></i>Leave</a>
+                </li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </nav>
