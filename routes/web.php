@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\DepartementController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\LeaveController;
@@ -62,3 +63,11 @@ Route::get('leave/create', [LeaveController::class, 'create']);
 Route::get('leave/{id}/edit', [LeaveController::class, 'edit']);
 Route::patch('leave/{id}', [LeaveController::class, 'update']); //update
 Route::get('leave/{id}/delete', [LeaveController::class, 'destroy']); //delete
+
+//attendance
+Route::post('attendance', [AttendanceController::class, 'store']); //create
+Route::get('attendance', [AttendanceController::class, 'index']);
+Route::get('attendance/create', [AttendanceController::class, 'create']);
+Route::get('attendance/{id}/edit', [AttendanceController::class, 'edit']);
+Route::patch('attendance/{id}', [AttendanceController::class, 'update']); //update
+Route::get('attendance/{id}/delete', [AttendanceController::class, 'destroy']); //delete
