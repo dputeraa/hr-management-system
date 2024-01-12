@@ -23,11 +23,11 @@
                         {{-- <a class="nav-link" href="{{ route('profile.detail') }}"><i class="fa fa-user"></i>My
                         Profile</a> --}}
 
-                        {{-- <a class="nav-link" onclick="document.getElementById('logout-form').submit()" href="#">
+                        <a class="nav-link" onclick="document.getElementById('logout-form').submit()" href="#">
                             <i class="fa fa-power-off"></i>Logout</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
-                        </form> --}}
+                        </form>
                     </div>
                 </div>
 
