@@ -3,6 +3,7 @@
 use App\Http\Controllers\DepartementController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\PositionController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,3 +45,11 @@ Route::get('employee/{id}', [EmployeeController::class, 'show']);
 Route::get('employee/{id}/edit', [EmployeeController::class, 'edit']);
 Route::patch('employee/{id}', [EmployeeController::class, 'update']); //update
 Route::get('employee/{id}/delete', [EmployeeController::class, 'destroy']); //delete
+
+// USER / ADMIN
+Route::post('user', [UserController::class, 'store']); //create
+Route::get('user', [UserController::class, 'index']);
+Route::get('user/create', [UserController::class, 'create']);
+Route::get('user/{id}/edit', [UserController::class, 'edit']);
+Route::patch('user/{id}', [UserController::class, 'update']); //update
+Route::get('user/{id}/delete', [UserController::class, 'destroy']); //delete

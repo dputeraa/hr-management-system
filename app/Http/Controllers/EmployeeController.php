@@ -180,6 +180,11 @@ class EmployeeController extends Controller
         $skill = $request->input('skill');
         $certification = $request->input('certification');
 
+        $sameEmail = User::where('email', $email)->first();
+        if ($sameEmail) {
+            return redirect()->back()->with('error_message', 'Email sudah digunakan');
+        }
+
         $user = User::find($employee->user_id);
         if ($user) {
             $user->fill([
